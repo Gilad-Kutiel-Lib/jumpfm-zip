@@ -1,1 +1,1 @@
-A JumpFm plugin that displays the current version.
+A JumpFm plugin to zip and unzip files.
