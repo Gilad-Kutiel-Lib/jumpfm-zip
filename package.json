@@ -1,0 +1,18 @@
+{
+    "name": "jumpfm-zip",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "archiver": "^2.0.0",
+        "fs-extra": "^4.0.1",
+        "path": "^0.12.7",
+        "replace-ext": "^1.0.0",
+        "unzip": "^0.1.11"
+    }
+}
