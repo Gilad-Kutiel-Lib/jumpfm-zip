@@ -1,16 +1,18 @@
+import { JumpFm } from 'jumpfm-api'
+
 import * as archiver from 'archiver';
 import * as fs from 'fs-extra';
 import * as path from 'path';
 import * as replaceExt from 'replace-ext';
 import * as extractor from 'unzip';
 
-export const load = (jumpFm) => {
-    const bind = jumpFm.bindKeys
-    const activePanel = jumpFm.getActivePanel
+export const load = (jumpFm: JumpFm) => {
+    const bind = jumpFm.bind
+    const activePanel = jumpFm.getPanelActive
 
     const unzip = () => {
         try {
-            const zipFile = activePanel().getCurItem()
+            const zipFile = activePanel().getCurrentItem()
             const fullPath = zipFile.path
             fs.createReadStream(fullPath)
                 .pipe(extractor.Extract({
@@ -40,13 +42,13 @@ export const load = (jumpFm) => {
                 input.setSelectionRange(0, 'untitled'.length)
             },
             onAccept: to => {
-                const out = fs.createWriteStream(path.join(pan.getPath(), to))
+                const out = fs.createWriteStream(path.join(pan.getUrl().path, to))
                 zip.pipe(out)
                 zip.finalize()
             }
         })
     }
 
-    bind('zip', ['z'], zip).filterMode([])
-    bind('unzip', ['u'], unzip).filterMode([])
+    bind('zip', ['z'], zip)
+    bind('unzip', ['u'], unzip)
 }
