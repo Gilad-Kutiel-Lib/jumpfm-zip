@@ -1,1 +1,1 @@
-A JumpFm plugin to zip and unzip files.
+A [JumpFm](http://jumpfm.org/) plugin to zip and unzip files.
