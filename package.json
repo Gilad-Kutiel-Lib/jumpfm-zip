@@ -1,18 +1,28 @@
 {
-    "name": "jumpfm-zip",
-    "version": "1.1.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "archiver": "^2.0.0",
-        "fs-extra": "^4.0.1",
-        "path": "^0.12.7",
-        "replace-ext": "^1.0.0",
-        "unzip": "^0.1.11"
-    }
+  "name": "jumpfm-zip",
+  "version": "1.1.0",
+  "description": "A [JumpFm](http://jumpfm.org/) plugin to zip and unzip files.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "archiver": "^2.0.0",
+    "fs-extra": "^4.0.1",
+    "path": "^0.12.7",
+    "replace-ext": "^1.0.0",
+    "unzip": "^0.1.11"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JumpFm/jumpfm-zip.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/JumpFm/jumpfm-zip/issues"
+  },
+  "homepage": "https://github.com/JumpFm/jumpfm-zip#readme"
 }
